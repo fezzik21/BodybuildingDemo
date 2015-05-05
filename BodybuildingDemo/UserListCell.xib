@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="hth-e2-hIf" customClass="UserListCellTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hth-e2-hIf" id="Wpz-tI-Br7">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOU-5q-33u">
+                        <rect key="frame" x="98" y="2" width="55" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.44705882352941173" green="0.28627450980392155" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alr-rM-UeX">
+                        <rect key="frame" x="98" y="17" width="55" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.44705882349999998" green="0.28627450980000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&lt;Username&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0fA-Nf-VCq">
+                        <rect key="frame" x="152" y="2" width="97" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="2yW-LQ-EX7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Age&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgj-3u-pAd">
+                        <rect key="frame" x="152" y="17" width="108" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&lt;City&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdB-dR-Hkf">
+                        <rect key="frame" x="275" y="2" width="100" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&lt;State, Country&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubp-cd-cn5">
+                        <rect key="frame" x="257" y="17" width="118" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqH-hJ-g2i">
+                        <rect key="frame" x="303" y="39" width="72" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="h2L-DC-ouP"/>
+                            <constraint firstAttribute="width" constant="72" id="uul-pT-lxl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="Note" backgroundImage="Button_Background.png">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eeh-ag-LeX">
+                        <rect key="frame" x="8" y="8" width="69" height="51"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Eeh-ag-LeX" secondAttribute="height" multiplier="23:17" id="fsn-fR-xeJ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Eeh-ag-LeX" firstAttribute="leading" secondItem="Wpz-tI-Br7" secondAttribute="leadingMargin" id="AWd-c8-v1u"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ubp-cd-cn5" secondAttribute="trailing" constant="9" id="G9B-a2-sUj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Eeh-ag-LeX" secondAttribute="bottom" constant="-2" id="GZT-Xi-tG5"/>
+                    <constraint firstAttribute="centerY" secondItem="Eeh-ag-LeX" secondAttribute="centerY" id="I29-Jg-kK5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CdB-dR-Hkf" secondAttribute="trailing" constant="9" id="P60-ls-GOV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VqH-hJ-g2i" secondAttribute="trailing" constant="9" id="gQ0-xP-syN"/>
+                    <constraint firstItem="Eeh-ag-LeX" firstAttribute="top" secondItem="Wpz-tI-Br7" secondAttribute="topMargin" id="rzH-AO-NtA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ageLabel" destination="xgj-3u-pAd" id="q1D-Be-ioN"/>
+                <outlet property="cityLabel" destination="CdB-dR-Hkf" id="Pl4-r9-D5a"/>
+                <outlet property="noteButton" destination="VqH-hJ-g2i" id="7SR-NC-gHs"/>
+                <outlet property="profileImageView" destination="Eeh-ag-LeX" id="Sbp-6a-ua6"/>
+                <outlet property="stateAndCountryLabel" destination="Ubp-cd-cn5" id="NoZ-Ra-W5F"/>
+                <outlet property="usernameLabel" destination="0fA-Nf-VCq" id="4f0-yT-TZ6"/>
+            </connections>
+            <point key="canvasLocation" x="274" y="157"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Button_Background.png" width="151" height="56"/>
+    </resources>
+</document>
