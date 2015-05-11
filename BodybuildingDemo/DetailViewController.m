@@ -56,18 +56,21 @@
     if(self.userProfilePic != nil) {
         self.profileImageView.image = self.userProfilePic;
     } else {
+        self.profileImageView.image = [UIImage animatedImageNamed:@"spinner_image" duration:1.f];
         NSString *profileURL = self.userData.profilePicUrl;
         if (![profileURL isMemberOfClass:[NSNull class]]) {
             __weak typeof(self) weakSelf = self;
             [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:profileURL]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    weakSelf.profileImageView.image = [UIImage imageWithData:data];
+                    __typeof(self) strongSelf = weakSelf;
+                    if(strongSelf) {
+                        strongSelf.profileImageView.image = [UIImage imageWithData:data];
+                    }
                 });
             }];
         }
     }
-    long userId = (long)self.userData.userId;
-    NSString *currentNote = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, userId]];
+    NSString *currentNote = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, self.userData.userId]];
     [self.noteTextView setText: currentNote];
 }
 
@@ -77,16 +80,15 @@
 }
 
 -(IBAction)saveButtonPressed {
-    long userId = (long)self.userData.userId;
-    [[NSUserDefaults standardUserDefaults] setObject:self.noteTextView.text forKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, userId]];
+    [[NSUserDefaults standardUserDefaults] setObject:self.noteTextView.text forKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, self.userData.userId]];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserNoteUpdated" object:self userInfo:@{@"userId" : [NSNumber numberWithLong:self.userData.userId]}];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{}];
 }
 
 -(IBAction)clearButtonPressed {
-    long userId = (long)self.userData.userId;
     [self.noteTextView setText:@""];
-    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, userId]];
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, self.userData.userId]];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

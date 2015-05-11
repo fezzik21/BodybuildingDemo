@@ -8,11 +8,11 @@
 
 //To do:
 //Name field is too long for content (all of them could have this problem)
-//Working on an iphone 4s (90%), and on an iphone 6 plus (basically ok)
 //Removing redundant code, change variable names, etc
-//clean up unsatisfiable constraints
-//clean up constraints warning
-//make the layout match the doc better
+//More sanity checking on the returned users
+//Take a few string constants and turn them into constants
+//Improve the layout of the "Sort by" buttons
+//Improve visual design of popup note
 
 #import "UserListViewController.h"
 #import "NetworkManager.h"
@@ -60,11 +60,32 @@
     self.currentSortType = SORT_TYPE_NAME;
     self.networkManager = [[NetworkManager alloc] init];
     [self loadNewData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userNoteUpdated:) name:@"UserNoteUpdated" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)userNoteUpdated:(NSNotification *) notification {
+    long userIdUpdated = [[notification.userInfo objectForKey: @"userId"] longValue];
+    for(int i = 0; i < [self.tableData count]; ++i) {
+        if (((UserObject *)[self.tableData objectAtIndex:i]).userId == userIdUpdated) {
+            UserListCellTableViewCell *cell = (UserListCellTableViewCell*)[self.userListTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            NSString *currentNote = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, userIdUpdated]];
+            if((currentNote == nil) || ([currentNote isEqualToString:@""])) {
+                cell.noteButton.hidden = YES;
+            } else {
+                cell.noteButton.hidden = NO;
+            }
+        }
+    }
 }
 
 - (void)loadNewData {
@@ -78,21 +99,39 @@
                                           limit:LOAD_PER_REQUEST
                                            skip:self.skipValue
                                        returnTo:^(NSArray *result, int newSkipValue) {
-            long startCell = [self.tableData count];
-            weakSelf.skipValue = newSkipValue;
-            [weakSelf.tableData addObjectsFromArray:result];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSMutableArray *paths = [NSMutableArray arrayWithCapacity:[result count]];
-                for(int i = 0; i < [result count]; ++i) {
-                    NSIndexPath *path = [NSIndexPath indexPathForRow:i + startCell inSection:0];
-                    [paths addObject:path];
-                }
-                [weakSelf.userListTableView insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationFade];
-                weakSelf.dataRequestPending = NO;
-            });
-        }];
+                                           __typeof(self) strongSelf = weakSelf;
+                                           long startCell = [self.tableData count];
+                                           if(strongSelf) {
+                                               if(result == nil) {
+                                                   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                       message:@"Error Retrieving User List - Check Network Connection"
+                                                                                                      delegate:self
+                                                                                             cancelButtonTitle:@"Retry"
+                                                                                             otherButtonTitles:nil];
+                                                   [alertView show];
+                                                   strongSelf.dataRequestPending = NO;
+                                               } else {
+                                                   strongSelf.skipValue = newSkipValue;
+                                                   [strongSelf.tableData addObjectsFromArray:result];
+                                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                                       NSMutableArray *paths = [NSMutableArray arrayWithCapacity:[result count]];
+                                                       for(int i = 0; i < [result count]; ++i) {
+                                                           NSIndexPath *path = [NSIndexPath indexPathForRow:i + startCell inSection:0];
+                                                           [paths addObject:path];
+                                                       }
+                                                       [strongSelf.userListTableView insertRowsAtIndexPaths:paths withRowAnimation:   UITableViewRowAnimationFade];
+                                                       strongSelf.dataRequestPending = NO;
+                                                       //This call is for the startup case where 10 rows did not fill the screen
+                                                       [self performSelector:@selector(checkForScreenFull) withObject:nil afterDelay:0.5f];
+                                                   });
+                                               }
+                                           }
+                                       }];
     }
+}
 
+- (void)checkForScreenFull {
+    [self scrollViewDidEndDragging:(UIScrollView*)self.userListTableView willDecelerate:NO];
 }
 
 - (IBAction)sortByNameButtonTapped {
@@ -153,6 +192,7 @@
 
     NSString *profileURL = ((UserObject *)[self.tableData objectAtIndex:indexPath.row]).profilePicUrl;
     if (![profileURL isMemberOfClass:[NSNull class]]) {
+        cell.profileImageView.image = [UIImage animatedImageNamed:@"spinner_image" duration:1.f];
         [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:profileURL]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 cell.profileImageView.image = [UIImage imageWithData:data];
@@ -162,12 +202,18 @@
     
     [cell.noteButton addTarget:self action:@selector(noteButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
     [cell.noteButton setTag:indexPath.row];
+    
+    
+    NSString *currentNote = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, ((UserObject *)[self.tableData objectAtIndex:indexPath.row]).userId]];
+    if((currentNote == nil) || ([currentNote isEqualToString:@""])) {
+        cell.noteButton.hidden = YES;
+    }
     return cell;
 }
 
 - (void)noteButtonPushed:(id)sender {
     long row = ((UIButton *)sender).tag;
-    long userId = (long)((UserObject *)[self.tableData objectAtIndex:row]).userId;
+    long userId = ((UserObject *)[self.tableData objectAtIndex:row]).userId;
     NSString *currentNote = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:NM_USER_DEFAULTS_NOTE_KEY, userId]];
     
     self.noteDisplayParentView.alpha = 0.f;
@@ -220,6 +266,12 @@
         ((DetailViewController *)[segue destinationViewController]).userData = [sender objectAtIndex: 0];
         ((DetailViewController *)[segue destinationViewController]).userProfilePic = [sender objectAtIndex: 1];
     }
+}
+
+#pragma mark - Alert View Delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    [self loadNewData];
 }
 
 @end

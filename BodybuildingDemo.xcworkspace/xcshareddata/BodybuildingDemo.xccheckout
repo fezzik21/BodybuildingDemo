@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D120DB72-512C-4278-B5C4-C9E121BCAD9F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BodybuildingDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D1315AB26122769E6B242BA2EBC21137ACF7B698</key>
+		<string>https://github.com/fezzik21/BodybuildingDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BodybuildingDemo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D1315AB26122769E6B242BA2EBC21137ACF7B698</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fezzik21/BodybuildingDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D1315AB26122769E6B242BA2EBC21137ACF7B698</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D1315AB26122769E6B242BA2EBC21137ACF7B698</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BodybuildingDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

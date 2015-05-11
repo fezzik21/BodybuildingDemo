@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Ubuntu-B.ttf">
+            <string>Ubuntu-Bold</string>
+            <string>Ubuntu-Bold</string>
+        </mutableArray>
+        <mutableArray key="Ubuntu-R.ttf">
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -14,72 +27,83 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hth-e2-hIf" id="Wpz-tI-Br7">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOU-5q-33u">
-                        <rect key="frame" x="98" y="2" width="55" height="21"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOU-5q-33u">
+                        <rect key="frame" x="91" y="5" width="40" height="15"/>
+                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="13"/>
                         <color key="textColor" red="0.44705882352941173" green="0.28627450980392155" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alr-rM-UeX">
-                        <rect key="frame" x="98" y="17" width="55" height="21"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alr-rM-UeX">
+                        <rect key="frame" x="103" y="23" width="28" height="15"/>
+                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="13"/>
                         <color key="textColor" red="0.44705882349999998" green="0.28627450980000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&lt;Username&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0fA-Nf-VCq">
-                        <rect key="frame" x="152" y="2" width="97" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Username&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0fA-Nf-VCq">
+                        <rect key="frame" x="145" y="5" width="85" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="85" id="2yW-LQ-EX7"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Age&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgj-3u-pAd">
-                        <rect key="frame" x="152" y="17" width="108" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Age&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgj-3u-pAd">
+                        <rect key="frame" x="145" y="23" width="38" height="15"/>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&lt;City&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdB-dR-Hkf">
-                        <rect key="frame" x="275" y="2" width="100" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;City&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdB-dR-Hkf">
+                        <rect key="frame" x="334" y="5" width="38" height="15"/>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="&lt;State, Country&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubp-cd-cn5">
-                        <rect key="frame" x="257" y="17" width="118" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;State, Country&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubp-cd-cn5">
+                        <rect key="frame" x="272" y="20" width="100" height="15"/>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqH-hJ-g2i">
-                        <rect key="frame" x="303" y="39" width="72" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqH-hJ-g2i">
+                        <rect key="frame" x="300" y="39" width="72" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="h2L-DC-ouP"/>
                             <constraint firstAttribute="width" constant="72" id="uul-pT-lxl"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="15"/>
                         <state key="normal" title="Note" backgroundImage="Button_Background.png">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eeh-ag-LeX">
-                        <rect key="frame" x="8" y="8" width="69" height="51"/>
+                        <rect key="frame" x="8" y="4" width="78" height="57"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Eeh-ag-LeX" secondAttribute="height" multiplier="23:17" id="fsn-fR-xeJ"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstItem="CdB-dR-Hkf" firstAttribute="top" secondItem="0fA-Nf-VCq" secondAttribute="top" id="0PS-xF-sph"/>
+                    <constraint firstItem="xgj-3u-pAd" firstAttribute="leading" secondItem="0fA-Nf-VCq" secondAttribute="leading" id="45G-XB-uOQ"/>
                     <constraint firstItem="Eeh-ag-LeX" firstAttribute="leading" secondItem="Wpz-tI-Br7" secondAttribute="leadingMargin" id="AWd-c8-v1u"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Ubp-cd-cn5" secondAttribute="trailing" constant="9" id="G9B-a2-sUj"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Eeh-ag-LeX" secondAttribute="bottom" constant="-2" id="GZT-Xi-tG5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ubp-cd-cn5" secondAttribute="trailing" id="G9B-a2-sUj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Eeh-ag-LeX" secondAttribute="bottom" constant="-4" id="GZT-Xi-tG5"/>
                     <constraint firstAttribute="centerY" secondItem="Eeh-ag-LeX" secondAttribute="centerY" id="I29-Jg-kK5"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="CdB-dR-Hkf" secondAttribute="trailing" constant="9" id="P60-ls-GOV"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="VqH-hJ-g2i" secondAttribute="trailing" constant="9" id="gQ0-xP-syN"/>
-                    <constraint firstItem="Eeh-ag-LeX" firstAttribute="top" secondItem="Wpz-tI-Br7" secondAttribute="topMargin" id="rzH-AO-NtA"/>
+                    <constraint firstItem="lOU-5q-33u" firstAttribute="leading" secondItem="0fA-Nf-VCq" secondAttribute="leading" constant="-54" id="IRY-PL-oPU"/>
+                    <constraint firstItem="lOU-5q-33u" firstAttribute="leading" secondItem="Eeh-ag-LeX" secondAttribute="leading" constant="83" id="M5w-2e-HBz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CdB-dR-Hkf" secondAttribute="trailing" id="P60-ls-GOV"/>
+                    <constraint firstItem="Ubp-cd-cn5" firstAttribute="top" secondItem="VqH-hJ-g2i" secondAttribute="top" constant="-19" id="b3s-bC-GT0"/>
+                    <constraint firstItem="lOU-5q-33u" firstAttribute="top" secondItem="0fA-Nf-VCq" secondAttribute="top" id="bQ1-S0-1XF"/>
+                    <constraint firstItem="CdB-dR-Hkf" firstAttribute="top" secondItem="Ubp-cd-cn5" secondAttribute="top" constant="-15" id="cta-gQ-Plz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VqH-hJ-g2i" secondAttribute="trailing" id="gQ0-xP-syN"/>
+                    <constraint firstItem="xgj-3u-pAd" firstAttribute="top" secondItem="alr-rM-UeX" secondAttribute="top" id="kh2-j4-Awo"/>
+                    <constraint firstItem="lOU-5q-33u" firstAttribute="trailing" secondItem="alr-rM-UeX" secondAttribute="trailing" id="vlp-i5-F32"/>
+                    <constraint firstItem="lOU-5q-33u" firstAttribute="top" secondItem="Wpz-tI-Br7" secondAttribute="topMargin" constant="-3" id="y34-oh-40M"/>
+                    <constraint firstItem="lOU-5q-33u" firstAttribute="top" secondItem="alr-rM-UeX" secondAttribute="top" constant="-18" id="z98-px-IrK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

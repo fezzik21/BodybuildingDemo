@@ -12,7 +12,6 @@
 
 @implementation NetworkManager
 
-
 #define HOST_STRING @"http://107.170.231.93/member/?limit=%d&skip=%d&sort=%@"
 
 -(void)getMembersSortedBy:(NSString *)sortType limit:(int)limit skip:(int)skip returnTo:(void (^)(NSArray *, int))inBlock {
@@ -27,6 +26,7 @@
     
     __weak typeof(self) weakSelf = self;
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        __typeof(self) strongSelf = weakSelf;
         int sanitizedRemoveCount = 0;
         NSArray *responseArray = (NSArray *)responseObject;
         NSMutableArray *sanitizedResult = [NSMutableArray arrayWithCapacity:[responseArray count]];
@@ -41,28 +41,22 @@
         }
         
         if(sanitizedRemoveCount > 0) {
-            [weakSelf getMembersSortedBy:sortType limit:sanitizedRemoveCount skip:(skip + limit) returnTo:^(NSArray *result, int skipValueResult) {
-                [sanitizedResult addObjectsFromArray:result];
-                newSkipValue = skipValueResult;
-                inBlock((NSArray *)sanitizedResult, newSkipValue);
-            }];
+            if(strongSelf) {
+                [strongSelf getMembersSortedBy:sortType limit:sanitizedRemoveCount skip:(skip + limit) returnTo:^(NSArray *result, int skipValueResult) {
+                    [sanitizedResult addObjectsFromArray:result];
+                    newSkipValue = skipValueResult;
+                    inBlock((NSArray *)sanitizedResult, newSkipValue);
+                }];
+            }
         } else {
             inBlock((NSArray *)sanitizedResult, newSkipValue);
         }
         
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        // 4
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving User List - Check Network Connection"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"Ok"
-                                                  otherButtonTitles:nil];
-        [alertView show];
+        inBlock(nil, 0);
     }];
     
-    // 5
     [operation start];
 }
 

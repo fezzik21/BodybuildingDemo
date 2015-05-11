@@ -41,6 +41,7 @@
                 self.age = (int)[ageComponents year];
             }
             
+            self.userId = [[inDictionary valueForKey:UO_KEY_USERID] longValue];
             self.state = [inDictionary valueForKey:UO_KEY_STATE];
             self.country = [inDictionary valueForKey:UO_KEY_COUNTRY];
             self.city = [inDictionary valueForKey:UO_KEY_CITY];

@@ -25,6 +25,21 @@
 		C3467D3B1AF1F3D40046109C /* Button_Background_Wide.png in Resources */ = {isa = PBXBuildFile; fileRef = C3467D3A1AF1F3D40046109C /* Button_Background_Wide.png */; };
 		C3467D3D1AF1F4170046109C /* Button_Background_Wide_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = C3467D3C1AF1F4170046109C /* Button_Background_Wide_Green.png */; };
 		C3467D401AF289C70046109C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3467D3F1AF289C70046109C /* NetworkManager.m */; };
+		C35AC0961AF96E4300D4573E /* spinner_image11.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC08A1AF96E4300D4573E /* spinner_image11.png */; };
+		C35AC0971AF96E4300D4573E /* spinner_image10.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC08B1AF96E4300D4573E /* spinner_image10.png */; };
+		C35AC0981AF96E4300D4573E /* spinner_image9.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC08C1AF96E4300D4573E /* spinner_image9.png */; };
+		C35AC0991AF96E4300D4573E /* spinner_image8.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC08D1AF96E4300D4573E /* spinner_image8.png */; };
+		C35AC09A1AF96E4300D4573E /* spinner_image7.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC08E1AF96E4300D4573E /* spinner_image7.png */; };
+		C35AC09B1AF96E4300D4573E /* spinner_image6.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC08F1AF96E4300D4573E /* spinner_image6.png */; };
+		C35AC09C1AF96E4300D4573E /* spinner_image5.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0901AF96E4300D4573E /* spinner_image5.png */; };
+		C35AC09D1AF96E4300D4573E /* spinner_image4.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0911AF96E4300D4573E /* spinner_image4.png */; };
+		C35AC09E1AF96E4300D4573E /* spinner_image3.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0921AF96E4300D4573E /* spinner_image3.png */; };
+		C35AC09F1AF96E4300D4573E /* spinner_image2.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0931AF96E4300D4573E /* spinner_image2.png */; };
+		C35AC0A01AF96E4300D4573E /* spinner_image1.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0941AF96E4300D4573E /* spinner_image1.png */; };
+		C35AC0A11AF96E4300D4573E /* spinner_image0.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0951AF96E4300D4573E /* spinner_image0.png */; };
+		C35AC0A41AF9751300D4573E /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0A21AF9751300D4573E /* Ubuntu-R.ttf */; };
+		C35AC0A51AF9751300D4573E /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0A31AF9751300D4573E /* Ubuntu-B.ttf */; };
+		C35AC0A71AF97E8600D4573E /* bbcom_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C35AC0A61AF97E8600D4573E /* bbcom_logo.png */; };
 		C35D4F7C1AF7EDA000E9EAED /* Icon_76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = C35D4F7B1AF7EDA000E9EAED /* Icon_76x76.png */; };
 		C35D4F7E1AF7EDFE00E9EAED /* Icon_152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = C35D4F7D1AF7EDFE00E9EAED /* Icon_152x152.png */; };
 /* End PBXBuildFile section */
@@ -70,6 +85,21 @@
 		C3467D3C1AF1F4170046109C /* Button_Background_Wide_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Background_Wide_Green.png; sourceTree = "<group>"; };
 		C3467D3E1AF289C70046109C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		C3467D3F1AF289C70046109C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		C35AC08A1AF96E4300D4573E /* spinner_image11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image11.png; sourceTree = "<group>"; };
+		C35AC08B1AF96E4300D4573E /* spinner_image10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image10.png; sourceTree = "<group>"; };
+		C35AC08C1AF96E4300D4573E /* spinner_image9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image9.png; sourceTree = "<group>"; };
+		C35AC08D1AF96E4300D4573E /* spinner_image8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image8.png; sourceTree = "<group>"; };
+		C35AC08E1AF96E4300D4573E /* spinner_image7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image7.png; sourceTree = "<group>"; };
+		C35AC08F1AF96E4300D4573E /* spinner_image6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image6.png; sourceTree = "<group>"; };
+		C35AC0901AF96E4300D4573E /* spinner_image5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image5.png; sourceTree = "<group>"; };
+		C35AC0911AF96E4300D4573E /* spinner_image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image4.png; sourceTree = "<group>"; };
+		C35AC0921AF96E4300D4573E /* spinner_image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image3.png; sourceTree = "<group>"; };
+		C35AC0931AF96E4300D4573E /* spinner_image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image2.png; sourceTree = "<group>"; };
+		C35AC0941AF96E4300D4573E /* spinner_image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image1.png; sourceTree = "<group>"; };
+		C35AC0951AF96E4300D4573E /* spinner_image0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_image0.png; sourceTree = "<group>"; };
+		C35AC0A21AF9751300D4573E /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
+		C35AC0A31AF9751300D4573E /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
+		C35AC0A61AF97E8600D4573E /* bbcom_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbcom_logo.png; sourceTree = "<group>"; };
 		C35D4F7B1AF7EDA000E9EAED /* Icon_76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_76x76.png; sourceTree = "<group>"; };
 		C35D4F7D1AF7EDFE00E9EAED /* Icon_152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_152x152.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +195,21 @@
 		C3467D0A1AF1DE4A0046109C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C35AC0A61AF97E8600D4573E /* bbcom_logo.png */,
+				C35AC0A21AF9751300D4573E /* Ubuntu-R.ttf */,
+				C35AC0A31AF9751300D4573E /* Ubuntu-B.ttf */,
+				C35AC08A1AF96E4300D4573E /* spinner_image11.png */,
+				C35AC08B1AF96E4300D4573E /* spinner_image10.png */,
+				C35AC08C1AF96E4300D4573E /* spinner_image9.png */,
+				C35AC08D1AF96E4300D4573E /* spinner_image8.png */,
+				C35AC08E1AF96E4300D4573E /* spinner_image7.png */,
+				C35AC08F1AF96E4300D4573E /* spinner_image6.png */,
+				C35AC0901AF96E4300D4573E /* spinner_image5.png */,
+				C35AC0911AF96E4300D4573E /* spinner_image4.png */,
+				C35AC0921AF96E4300D4573E /* spinner_image3.png */,
+				C35AC0931AF96E4300D4573E /* spinner_image2.png */,
+				C35AC0941AF96E4300D4573E /* spinner_image1.png */,
+				C35AC0951AF96E4300D4573E /* spinner_image0.png */,
 				C35D4F7D1AF7EDFE00E9EAED /* Icon_152x152.png */,
 				C35D4F7B1AF7EDA000E9EAED /* Icon_76x76.png */,
 				C324CB561AF3E70500E6B760 /* Icon_58x58.png */,
@@ -278,15 +323,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3467D311AF1DE670046109C /* UserListCell.xib in Resources */,
+				C35AC0A01AF96E4300D4573E /* spinner_image1.png in Resources */,
+				C35AC09C1AF96E4300D4573E /* spinner_image5.png in Resources */,
+				C35AC0961AF96E4300D4573E /* spinner_image11.png in Resources */,
 				C3467D331AF1EDA70046109C /* Button_Background.png in Resources */,
+				C35AC0981AF96E4300D4573E /* spinner_image9.png in Resources */,
 				C3467D161AF1DE4A0046109C /* Main.storyboard in Resources */,
 				C324CB581AF3E70500E6B760 /* Icon_58x58.png in Resources */,
+				C35AC0971AF96E4300D4573E /* spinner_image10.png in Resources */,
 				C3467D1B1AF1DE4A0046109C /* LaunchScreen.xib in Resources */,
 				C3467D3B1AF1F3D40046109C /* Button_Background_Wide.png in Resources */,
+				C35AC0A51AF9751300D4573E /* Ubuntu-B.ttf in Resources */,
+				C35AC09F1AF96E4300D4573E /* spinner_image2.png in Resources */,
 				C3467D181AF1DE4A0046109C /* Images.xcassets in Resources */,
 				C35D4F7C1AF7EDA000E9EAED /* Icon_76x76.png in Resources */,
+				C35AC09D1AF96E4300D4573E /* spinner_image4.png in Resources */,
+				C35AC09E1AF96E4300D4573E /* spinner_image3.png in Resources */,
 				C324CB591AF3E70500E6B760 /* Icon_120x120.png in Resources */,
 				C35D4F7E1AF7EDFE00E9EAED /* Icon_152x152.png in Resources */,
+				C35AC0A41AF9751300D4573E /* Ubuntu-R.ttf in Resources */,
+				C35AC09B1AF96E4300D4573E /* spinner_image6.png in Resources */,
+				C35AC09A1AF96E4300D4573E /* spinner_image7.png in Resources */,
+				C35AC0A71AF97E8600D4573E /* bbcom_logo.png in Resources */,
+				C35AC0A11AF96E4300D4573E /* spinner_image0.png in Resources */,
+				C35AC0991AF96E4300D4573E /* spinner_image8.png in Resources */,
 				C3467D3D1AF1F4170046109C /* Button_Background_Wide_Green.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

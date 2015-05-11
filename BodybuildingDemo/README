@@ -1,18 +1,14 @@
 Demo of a user review app for a gym or bodybuilding site.
 
-Known user-facing issues:
+These are the things I would do next:
+
 - Text fields may not be long enough to hold their contents
-- UI Layout is still wonky on iPhone 4s/5/5s
+- Layout doesn't optimally use space on an iPad - perhaps a new layout
 - There is no visual indicator that more users are loading when scrolling
-- Sort buttons don't work (issues on the back end?)
-- Need better app icons, visual/design pass
 - When you edit a note on the detail view, the buttons should float up over
   the keyboard
-
-Known code issues:
-- Very little bulletproofing; bad data could easily cause a crash
-- Some duplication of effort (e.g. calculating age from birthday)
-- Use enums instead of defines
+- Visual pass on the pop-ups
+- Drop down list for sorting, instead of two buttons
 
 
 

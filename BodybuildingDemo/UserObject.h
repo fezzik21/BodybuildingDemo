@@ -20,7 +20,7 @@
 @property (assign, nonatomic) int weightInPounds;
 @property (assign, nonatomic) int bodyFatPercentage;
 @property (strong, nonatomic) NSString *profilePicUrl;
-@property (assign, nonatomic) int userId;
+@property (assign, nonatomic) long userId;
 
 -(UserObject *)initFromDictionary:(NSDictionary *)inDictionary;
 -(BOOL)isValid;

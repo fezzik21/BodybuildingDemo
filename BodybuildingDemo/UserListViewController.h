@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface UserListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @end
